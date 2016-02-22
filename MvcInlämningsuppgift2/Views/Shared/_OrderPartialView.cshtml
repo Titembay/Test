@@ -1,0 +1,31 @@
+﻿@model List<MvcInlämningsuppgift2.Models.Matratt>
+
+<h2>Varukorg</h2>
+<hr />
+<h4>Din Order:</h4>
+@foreach (var item in Model)
+{
+    
+    <table>
+        
+        <tr>
+            <td>@item.MatrattNamn  @item.Pris :-</td>
+        </tr>
+    </table>
+}
+<hr />
+
+<h5><strong>Summan:</strong> @ViewBag.TotalSumman </h5>
+<br />
+@Ajax.ActionLink("Beställa", "bestallning", "Order",
+                       new { id = 1 },
+                       new AjaxOptions
+                       {
+                           UpdateTargetId = "VarukorgVisa",
+                           HttpMethod = "GET",
+                           InsertionMode = InsertionMode.Replace
+
+                       },
+                       new { @class = "btn btn-primary btn-block" })
+<p>@ViewBag.Message</p>
+

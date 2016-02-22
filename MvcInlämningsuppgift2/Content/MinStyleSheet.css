@@ -1,0 +1,126 @@
+﻿body {
+    background-image: url('../412067_0.jpg');
+    background-size: cover;
+}
+
+.jumbotron {
+    background-image: url('../PIZZERIA_1830.jpg');
+    background-size: cover;
+}
+
+.container body-content footer p {
+    background-color: aqua;
+    color: blue;
+}
+
+#start {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+#startimg {
+    margin: 20px 20px 15px 20px;
+    width: 300px;
+    height: 300px;
+    float: right;
+}
+
+.meny a:hover {
+    background-color: grey;
+    text-decoration-line: underline;
+}
+
+.col-sm-12 {
+    background-color: white;
+    font-size: 18px;
+    border: dashed;
+}
+.col-sm-9
+{
+    background-color:white;
+    font-size: 18px;
+    border: dashed;
+}
+
+#meny {
+    margin: 10px 10px 10px 10px;
+    outline-style: double;
+}
+
+hr {
+    border-color: black;
+    border-width: 2px;
+}
+
+#besk th {
+    font-size: 28px;
+    text-decoration: underline;
+    color: red;
+}
+
+#pris {
+    font-style: italic;
+    width: 50px;
+}
+
+#matBes {
+    width: 650px;
+}
+
+#btn {
+    height: 30px;
+}
+
+#men {
+    text-decoration: double,underline;
+}
+
+#reg {
+    background-color: white;
+}
+
+#regForm {
+    padding: 10px 10px 10px 10px;
+    background-color: #c2c2a3;
+    width: 650px;
+    outline-style: double;
+    margin-bottom: 15px;
+}
+
+#log {
+    padding: 10px 10px 10px 10px;
+    background-color: #e0e0d1;
+    width: 650px;
+    outline-style: double;
+}
+
+#anv {
+    color: white;
+}
+
+li a:hover {
+   background-color: red;
+   color:white;
+
+}
+
+#uppd
+{
+    background-color:white;
+}
+
+
+#VarukorgVisa {
+    border: solid;
+    float: right;
+    padding-right: 10px;
+    background-color: white /*#b3ff99*/;
+    margin-bottom:10px;
+    padding-bottom:10px;
+    /*min-height:150px;*/
+}
+
+div:empty {
+    display: none;
+}

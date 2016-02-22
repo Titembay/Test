@@ -1,0 +1,48 @@
+﻿@model List<MvcInlämningsuppgift2.Models.MatrattTyp>
+
+@{
+    ViewBag.Title = "Meny";
+}
+<div id="meny" class="col-sm-12">
+
+    <h1 id="men">Meny</h1>
+    <table>
+        @foreach (var typ in Model)
+        {
+            <tr id="besk">
+                <th>@typ.Beskrivning</th>
+            </tr>
+            
+
+
+            foreach (var matratt in typ.Matratts)
+            {
+
+                <tr>
+                    <th>@matratt.MatrattNamn</th>
+                </tr>
+                <tr>
+                    <td id="matBes">@matratt.Beskrivning</td>
+                    <td id="pris">@matratt.Pris kr</td>
+                    <td >
+                        @Ajax.ActionLink("Köp", "AddToCart","Order",
+                       new { id = @matratt.MatrattID },
+                       new AjaxOptions
+                       {
+                           UpdateTargetId = "VarukorgVisa",
+                           HttpMethod = "GET",
+                           InsertionMode = InsertionMode.Replace
+
+                       },
+                       new{ @class= "btn btn-success" })
+                        </td>
+                </tr>
+
+
+            }
+
+        }
+    </table>
+
+   
+</div>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TomasosModelStoreContainer" CdmEntityContainer="TomasosEntities">
+    <EntitySetMapping Name="Bestallnings">
+      <EntityTypeMapping TypeName="TomasosModel.Bestallning">
+        <MappingFragment StoreEntitySet="Bestallning">
+          <ScalarProperty Name="BestallningID" ColumnName="BestallningID" />
+          <ScalarProperty Name="BestallningDatum" ColumnName="BestallningDatum" />
+          <ScalarProperty Name="Totalbelopp" ColumnName="Totalbelopp" />
+          <ScalarProperty Name="Levererad" ColumnName="Levererad" />
+          <ScalarProperty Name="KundID" ColumnName="KundID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BestallningMatratts">
+      <EntityTypeMapping TypeName="TomasosModel.BestallningMatratt">
+        <MappingFragment StoreEntitySet="BestallningMatratt">
+          <ScalarProperty Name="MatrattID" ColumnName="MatrattID" />
+          <ScalarProperty Name="BestallningID" ColumnName="BestallningID" />
+          <ScalarProperty Name="Antal" ColumnName="Antal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kunds">
+      <EntityTypeMapping TypeName="TomasosModel.Kund">
+        <MappingFragment StoreEntitySet="Kund">
+          <ScalarProperty Name="KundID" ColumnName="KundID" />
+          <ScalarProperty Name="Namn" ColumnName="Namn" />
+          <ScalarProperty Name="Gatuadress" ColumnName="Gatuadress" />
+          <ScalarProperty Name="Postnr" ColumnName="Postnr" />
+          <ScalarProperty Name="Postort" ColumnName="Postort" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="AnvandarNamn" ColumnName="AnvandarNamn" />
+          <ScalarProperty Name="Losenord" ColumnName="Losenord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matratts">
+      <EntityTypeMapping TypeName="TomasosModel.Matratt">
+        <MappingFragment StoreEntitySet="Matratt">
+          <ScalarProperty Name="MatrattID" ColumnName="MatrattID" />
+          <ScalarProperty Name="MatrattNamn" ColumnName="MatrattNamn" />
+          <ScalarProperty Name="Beskrivning" ColumnName="Beskrivning" />
+          <ScalarProperty Name="Pris" ColumnName="Pris" />
+          <ScalarProperty Name="MatrattTyp" ColumnName="MatrattTyp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatrattTyps">
+      <EntityTypeMapping TypeName="TomasosModel.MatrattTyp">
+        <MappingFragment StoreEntitySet="MatrattTyp">
+          <ScalarProperty Name="MatrattTyp1" ColumnName="MatrattTyp" />
+          <ScalarProperty Name="Beskrivning" ColumnName="Beskrivning" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produkts">
+      <EntityTypeMapping TypeName="TomasosModel.Produkt">
+        <MappingFragment StoreEntitySet="Produkt">
+          <ScalarProperty Name="ProduktID" ColumnName="ProduktID" />
+          <ScalarProperty Name="ProduktNamn" ColumnName="ProduktNamn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TomasosModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MatrattProdukt" TypeName="TomasosModel.MatrattProdukt" StoreEntitySet="MatrattProdukt">
+      <EndProperty Name="Matratt">
+        <ScalarProperty Name="MatrattID" ColumnName="MatrattID" />
+      </EndProperty>
+      <EndProperty Name="Produkt">
+        <ScalarProperty Name="ProduktID" ColumnName="ProduktID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
